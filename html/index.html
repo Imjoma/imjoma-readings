@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML | Readings</title>
+
     <link rel="stylesheet" href="../shared/style.css" />
   </head>
+
   <body>
     <h1>HTML Introduction 📑</h1>
     <br />
     <hr />
+    <div class="bookmark" style="display: flex; gap: 0.5rem">
+      <a href="../index.html">Back</a>
+      <a href="#web-browser">Web Browser</a>
+      <a href="#attributes">Attributes</a>
+    </div>
     <br />
     <h2>What is HTML?</h2>
     <ul>
@@ -55,7 +62,7 @@
       </li>
     </ul>
     <br />
-    <h2>HTML Basic Example</h2>
+    <h2 id="web-browser">HTML Basic Example</h2>
     <ul>
       <li>The &lt;!DOCTYPE&gt; declaration represent the document type.</li>
       <li>HTML Headings defines from most to least important heading.</li>
@@ -70,7 +77,7 @@
       </li>
     </ul>
     <br />
-    <h2>HTML Attributes</h2>
+    <h2 id="attributes">HTML Attributes</h2>
     <ul>
       <li>
         Attributes provide additional information about elements usually come in
@@ -98,6 +105,44 @@
         the element.
       </li>
     </ul>
-    <!-- checking github repo -->
+    <br />
+    <h2 id="table">HTML Table</h2>
+    <ul>
+      <li>A table in HTML consists of table cells inside rows and columns.</li>
+      <li>
+        Start from &lt;table&gt; tag then table row or &lt;tr&gt; tag as the
+        container for table headers &lt;th&gt;.
+      </li>
+      <li>
+        Then add table rows for each data; and this data are tag as &lt;td&gt;.
+      </li>
+      <li>
+        HTML &lt;table&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt; tags does not have
+        default border and this is where CSS <mark>border</mark> property comes
+        in to play.
+      </li>
+      <li>
+        HTML &lt;table&gt; relies its own width by its content and we can
+        initialize a default value by using CSS <mark>width</mark> property.
+      </li>
+      <li>
+        Header that spans over two or more columns/rows can be achieve by adding
+        a
+        <mark>colspan</mark> and/or <mark>rowspan</mark> attribute directly from
+        &lt;th&gt; tag.
+      </li>
+      <li>
+        HTML Table Colgroup <mark>&lt;colgroup&gt;</mark> acts as a container to
+        style specific columns of a table.
+      </li>
+      <li>
+        Each column is specified with a <mark>&lt;col&gt;</mark> element where
+        we can access the <mark>span</mark> and <mark>style</mark> attributes.
+      </li>
+    </ul>
+    <br />
+    <div class="tableContainer"></div>
+    <br />
+    <script src="../components/table.js"></script>
   </body>
 </html>

@@ -1,27 +1,27 @@
-export const renderUnorderedList = (name) => {
+export const renderUnorderedList = (name, style) => {
   return `
   <h4>${name}</h4>
-  <ul>
+  <ul style='${style}'>
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li>
 </ul>`;
 };
 
-export const renderOrderedList = (name) => {
+export const renderOrderedList = (name, style) => {
   return `
   <h4>${name}</h4>
-  <ol>
+  <ol style='${style}'>
   <li>Coffee</li>
   <li>Tea</li>
   <li>Milk</li>
 </ol`;
 };
 
-export const renderDescriptionList = (name) => {
+export const renderDescriptionList = (name, style) => {
   return `
   <h4>${name}</h4>
-  <dl>
+<dl style='${style}'>
   <dt>Coffee</dt>
   <dd>- black hot drink</dd>
   <dt>Milk</dt>

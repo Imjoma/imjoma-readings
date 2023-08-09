@@ -26,20 +26,29 @@ listButtons.forEach((button) => {
   });
 });
 
+// STYLE: add style as parameter
+
+const listStyle = [{ "padding-left": "1.2rem" }];
+
+const listToString = listStyle.map((l) => {
+  return `${Object.keys(l)}:${Object.values(l)}`;
+});
+
 const renderList = (tag) => {
   const listVariant = listData.filter((i) => i.tag === tag)[0];
-  const { id, name } = listVariant;
-  const nameUp = name.toUpperCase();
+  const nameUp = listVariant.name.toUpperCase();
+
+  const style = listToString.join(";");
 
   switch (tag) {
     case "dl":
-      listDisplay.innerHTML = renderDescriptionList(nameUp);
+      listDisplay.innerHTML = renderDescriptionList(nameUp, style);
       break;
     case "ol":
-      listDisplay.innerHTML = renderOrderedList(nameUp);
+      listDisplay.innerHTML = renderOrderedList(nameUp, style);
       break;
     default:
-      listDisplay.innerHTML = renderUnorderedList(nameUp);
+      listDisplay.innerHTML = renderUnorderedList(nameUp, style);
       break;
   }
 };

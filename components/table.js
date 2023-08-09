@@ -1,4 +1,4 @@
-const tableContainer = document.querySelector(".tableContainer");
+const tableContainer = document.querySelector(".table-container");
 
 const renderTable = `<table>
 <tr>
